@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace atheneum.Test
 {
     [TestClass]
-    public class Section_Creator_Service_Tests
+    public class Section_Service_Tests
     {
         [TestMethod]
         public void Can_Create_A_Section()
