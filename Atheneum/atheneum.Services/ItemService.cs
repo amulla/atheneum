@@ -38,6 +38,7 @@ namespace atheneum.Services
                 items[index].Title = item.Title;
                 items[index].Author = item.Author;
                 items[index].ISBN = item.ISBN;
+                items[index].Status = item.Status;
                 return true;
             }
 

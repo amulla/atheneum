@@ -4,6 +4,13 @@ using System.Text;
 
 namespace atheneum.Core
 {
+    public enum ItemStatus
+    {
+        OnShelf,
+        OnLoan,
+        InRepair
+    }
+
     public class Item
     {
         public Guid Id;
@@ -13,5 +20,6 @@ namespace atheneum.Core
         public string Title;
         public string Author;
         public string ISBN;
+        public ItemStatus Status; 
     }
 }

@@ -18,7 +18,7 @@ namespace atheneum.Test
             Guid _id = Guid.NewGuid();
             Guid section_guid = Guid.NewGuid();
             Guid category_guid = Guid.NewGuid();
-            Item item = new Item { Id = _id, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0001", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277" };
+            Item item = new Item { Id = _id, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0001", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
 
             // Act
             bool result = _itemService.Add(item, items);
@@ -36,8 +36,8 @@ namespace atheneum.Test
             Guid _id = Guid.NewGuid();
             Guid section_guid = Guid.NewGuid();
             Guid category_guid = Guid.NewGuid();
-            Item book1 = new Item { Id = _id, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0001", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277" };
-            Item book2 = new Item { Id = _id, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0002", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277" };
+            Item book1 = new Item { Id = _id, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0001", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
+            Item book2 = new Item { Id = _id, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0002", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
 
             // Act
             bool book1_result = _itemService.Add(book1, items);
@@ -59,8 +59,8 @@ namespace atheneum.Test
             Guid book2_guid = Guid.NewGuid();
             Guid section_guid = Guid.NewGuid();
             Guid category_guid = Guid.NewGuid();
-            Item book1 = new Item { Id = book1_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0001", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277" };
-            Item book2 = new Item { Id = book2_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0001", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277" };
+            Item book1 = new Item { Id = book1_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0001", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
+            Item book2 = new Item { Id = book2_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0001", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
 
             // Act
             bool book1_result = _itemService.Add(book1, items);
@@ -83,9 +83,9 @@ namespace atheneum.Test
             Guid book3_guid = Guid.NewGuid();
             Guid section_guid = Guid.NewGuid();
             Guid category_guid = Guid.NewGuid();
-            Item book1 = new Item { Id = book1_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0001", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277" };
-            Item book2 = new Item { Id = book2_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0002", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277" };
-            Item book3 = new Item { Id = book3_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0003", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277" };
+            Item book1 = new Item { Id = book1_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0001", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
+            Item book2 = new Item { Id = book2_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0002", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
+            Item book3 = new Item { Id = book3_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0003", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
 
             _itemService.Add(book1, items);
             book1.Code = "ADLTBOOKBROW0099";
@@ -110,10 +110,10 @@ namespace atheneum.Test
             Guid book4_guid = Guid.NewGuid();
             Guid section_guid = Guid.NewGuid();
             Guid category_guid = Guid.NewGuid();
-            Item book1 = new Item { Id = book1_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0001", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277" };
-            Item book2 = new Item { Id = book2_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0002", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277" };
-            Item book3 = new Item { Id = book3_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0003", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277" };
-            Item book4 = new Item { Id = book4_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0004", Author = "Dan Brown", Title = "The Lost Symbol Large Font", ISBN = "9780593054277" };
+            Item book1 = new Item { Id = book1_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0001", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
+            Item book2 = new Item { Id = book2_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0002", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
+            Item book3 = new Item { Id = book3_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0003", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
+            Item book4 = new Item { Id = book4_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0004", Author = "Dan Brown", Title = "The Lost Symbol Large Font", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
 
             _itemService.Add(book1, items);
             _itemService.Add(book2, items);
@@ -139,10 +139,10 @@ namespace atheneum.Test
             Guid book4_guid = Guid.NewGuid();
             Guid section_guid = Guid.NewGuid();
             Guid category_guid = Guid.NewGuid();
-            Item book1 = new Item { Id = book1_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0001", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277" };
-            Item book2 = new Item { Id = book2_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0002", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277" };
-            Item book3 = new Item { Id = book3_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0003", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277" };
-            Item book4 = new Item { Id = book4_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0004", Author = "Daniel Brown", Title = "The Lost Symbol Large Font", ISBN = "9780593054277" };
+            Item book1 = new Item { Id = book1_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0001", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
+            Item book2 = new Item { Id = book2_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0002", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
+            Item book3 = new Item { Id = book3_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0003", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
+            Item book4 = new Item { Id = book4_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0004", Author = "Daniel Brown", Title = "The Lost Symbol Large Font", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
 
             _itemService.Add(book1, items);
             _itemService.Add(book2, items);
@@ -168,10 +168,10 @@ namespace atheneum.Test
             Guid book4_guid = Guid.NewGuid();
             Guid section_guid = Guid.NewGuid();
             Guid category_guid = Guid.NewGuid();
-            Item book1 = new Item { Id = book1_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0001", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277" };
-            Item book2 = new Item { Id = book2_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0002", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277" };
-            Item book3 = new Item { Id = book3_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0003", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277" };
-            Item book4 = new Item { Id = book4_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0004", Author = "Daniel Brown", Title = "The Lost Symbol Large Font", ISBN = "9780593054278" };
+            Item book1 = new Item { Id = book1_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0001", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
+            Item book2 = new Item { Id = book2_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0002", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
+            Item book3 = new Item { Id = book3_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0003", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
+            Item book4 = new Item { Id = book4_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0004", Author = "Daniel Brown", Title = "The Lost Symbol Large Font", ISBN = "9780593054278", Status = ItemStatus.OnShelf };
 
             _itemService.Add(book1, items);
             _itemService.Add(book2, items);
@@ -183,6 +183,35 @@ namespace atheneum.Test
             // Assert
             Item updated_item = items.Find(i => i.Id == book1_guid);
             Assert.AreEqual("9780593054278", updated_item.ISBN);
+        }
+
+        [TestMethod]
+        public void Amend_An_Item_Status()
+        {
+            // Arrange
+            ItemService _itemService = new ItemService();
+            List<Item> items = new List<Item>();
+            Guid book1_guid = Guid.NewGuid();
+            Guid book2_guid = Guid.NewGuid();
+            Guid book3_guid = Guid.NewGuid();
+            Guid book4_guid = Guid.NewGuid();
+            Guid section_guid = Guid.NewGuid();
+            Guid category_guid = Guid.NewGuid();
+            Item book1 = new Item { Id = book1_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0001", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
+            Item book2 = new Item { Id = book2_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0002", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
+            Item book3 = new Item { Id = book3_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0003", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnShelf };
+            Item book4 = new Item { Id = book4_guid, SectionId = section_guid, CategoryId = category_guid, Code = "ADLTBOOKBROW0004", Author = "Dan Brown", Title = "The Lost Symbol", ISBN = "9780593054277", Status = ItemStatus.OnLoan };
+
+            _itemService.Add(book1, items);
+            _itemService.Add(book2, items);
+            _itemService.Add(book3, items);
+
+            // Act
+            bool result = _itemService.Update(book1_guid, book4, items);
+
+            // Assert
+            Item updated_item = items.Find(i => i.Id == book1_guid);
+            Assert.AreEqual(ItemStatus.OnLoan, updated_item.Status);
         }
 
         [TestMethod]
