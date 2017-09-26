@@ -139,6 +139,7 @@ namespace atheneum.Test
 
             // Assert
             Assert.AreEqual(2, categories.Count);
+            CollectionAssert.DoesNotContain(categories, magazine_category);
 
         }
     }

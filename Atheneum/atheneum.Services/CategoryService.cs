@@ -35,7 +35,7 @@ namespace atheneum.Services
 
             int index = categories.FindIndex(s => s.Id == guid);
 
-            if (index > 0)
+            if (index >= 0)
             {
                 categories[index].Name = category.Name;
                 categories[index].Description = category.Description;

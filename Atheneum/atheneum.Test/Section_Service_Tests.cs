@@ -134,6 +134,7 @@ namespace atheneum.Test
 
             // Assert
             Assert.AreEqual(2, sections.Count);
+            CollectionAssert.DoesNotContain(sections, adults_section);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace atheneum.Services
             bool return_value = false;
             int index = sections.FindIndex(s => s.Id == guid);
 
-            if (index > 0)
+            if (index >= 0)
             {
                 sections[index].Name = section.Name;
                 sections[index].Description = section.Description;
