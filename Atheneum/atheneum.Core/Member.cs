@@ -16,6 +16,9 @@ namespace atheneum.Core
         public string Address;
         public string City;
         public string Postcode;
+        public string Email;
+        public string Telephone;
+        public string Mobile;
         public int MaxItems;
     }
 }

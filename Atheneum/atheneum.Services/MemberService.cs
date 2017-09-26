@@ -43,6 +43,9 @@ namespace atheneum.Services
                 members[index].Address = member.Address;
                 members[index].City = member.City;
                 members[index].Postcode = member.Postcode;
+                members[index].Email = member.Email;
+                members[index].Telephone = member.Telephone;
+                members[index].Mobile = member.Mobile;
                 members[index].MaxItems = member.MaxItems;
 
                 return true;
