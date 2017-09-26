@@ -7,7 +7,9 @@ namespace atheneum.Services
 {
     public interface ICategoryService
     {
-        bool Add(Category section, List<Category> sections);
+        bool Add(Category category, List<Category> categories);
+        bool Update(Guid guid, Category category, List<Category> categories);
+        bool Delete(Guid guid, List<Category> categories);
     }
     public class CategoryService : ICategoryService
     {
@@ -22,6 +24,37 @@ namespace atheneum.Services
             else
             {
                 return_value = false;
+            }
+
+            return return_value;
+        }
+
+        public bool Update(Guid guid, Category category, List<Category> categories)
+        {
+            bool return_value = true;
+
+            int index = categories.FindIndex(s => s.Id == guid);
+
+            if (index > 0)
+            {
+                categories[index].Name = category.Name;
+                categories[index].Description = category.Description;
+                return true;
+            }
+
+            return return_value;
+        }
+
+        public bool Delete(Guid guid, List<Category> categories)
+        {
+            bool return_value = true;
+
+            var removeCategory = categories.Find(s => s.Id == guid);
+
+            if (removeCategory != null)
+            {
+                categories.Remove(removeCategory);
+                return_value = true;
             }
 
             return return_value;
