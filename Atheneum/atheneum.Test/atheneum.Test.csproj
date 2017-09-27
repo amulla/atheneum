@@ -59,6 +59,7 @@
     <Compile Include="Category_Service_Tests.cs" />
     <Compile Include="Item_Service_Tests.cs" />
     <Compile Include="Member_Service_Tests.cs" />
+    <Compile Include="Loan_Service_Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\atheneum.Core\atheneum.Core.csproj">

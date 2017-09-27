@@ -20,5 +20,6 @@ namespace atheneum.Core
         public string Telephone;
         public string Mobile;
         public int MaxItems;
+        public List<Loan> Loans;
     }
 }

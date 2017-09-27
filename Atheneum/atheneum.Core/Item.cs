@@ -20,6 +20,6 @@ namespace atheneum.Core
         public string Title;
         public string Author;
         public string ISBN;
-        public ItemStatus Status; 
+        public ItemStatus Status;
     }
 }
